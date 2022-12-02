@@ -15,16 +15,36 @@
 }
 
 .portfolio, .footer, .clients, .team, .work, .benefits {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio, .footer, .clients, .team, .work, .benefits {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .portfolio__container, .footer__container, .clients__container, .team__container, .work__container, .benefits__container, .hero__container, .header__container {
-  width: 1200px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+}
+@media screen and (min-width: 480px) {
+  .portfolio__container, .footer__container, .clients__container, .team__container, .work__container, .benefits__container, .hero__container, .header__container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__container, .footer__container, .clients__container, .team__container, .work__container, .benefits__container, .hero__container, .header__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__container, .footer__container, .clients__container, .team__container, .work__container, .benefits__container, .hero__container, .header__container {
+    width: 1200px;
+  }
 }
 
 body {
