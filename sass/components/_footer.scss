@@ -1,0 +1,62 @@
+.footer {
+    @extend %section;
+
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $secondery-background-color;
+}
+
+.footer__container {
+    @extend %container;
+
+    display: flex;
+    align-items: baseline;
+}
+
+.footer__contacts {
+    margin-right: 70px;
+}
+
+.footer__list {
+    font-style: normal;
+}
+
+.footer__item {
+    width: 231px;
+
+    &--bottom-indent {
+        margin-bottom: 9px;
+    }
+}
+
+.footer__google__map {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+
+    color: $main-background-color;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+
+.footer__link {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+
+    color: $footer-contact-color;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+

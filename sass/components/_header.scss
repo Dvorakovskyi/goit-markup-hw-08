@@ -1,0 +1,48 @@
+.header {
+    border-bottom: 1px solid #ececec;
+}
+
+.header__container {
+    @extend %container;
+
+    display: flex;
+    align-items: center;
+}
+
+.header__discription {
+    margin-right: 93px;
+}
+
+.header__contact {
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    gap: 50px;
+}
+
+.header__contact__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    color: $text-color;
+
+    @include transition (color);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+
+.contact__icon {
+    fill: currentColor;
+}
+

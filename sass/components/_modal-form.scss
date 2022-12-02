@@ -1,0 +1,144 @@
+.modal__text {
+    display: block;
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $paragraphs-color;
+}
+
+.modal__wrapper {
+    position: relative;
+}
+
+.modal__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+
+    color: $text-color;
+}
+
+.modal__input {
+    display: block;
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    margin-bottom: 10px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    @include transition(border-color);
+
+    &:focus {
+        border-color: $hover-color;
+    }
+    
+    &:focus+.input__icon {
+        fill: $hover-color;
+    }
+}
+
+.modal__input--textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    resize: none;
+
+    &::placeholder {
+        margin-bottom: 20px;
+    
+        font-size: 12px;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+    
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.input__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    @include transition(fill);
+}
+
+.checkbox__label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    user-select: none;
+
+    color: $text-color;
+}
+
+.checkbox__link {
+    text-underline-offset: 3px;
+    color: $hover-color;
+}
+
+.checkbox__icon {
+    margin-right: 8px;
+}
+
+.icon__uncheck {
+    opacity: 1;
+
+    @include transition(opacity);
+}
+
+.icon__checked {
+    opacity: 0;
+
+    @include transition(opacity);
+}
+
+.checkbox__input:checked+.checkbox__icon .icon__uncheck {
+    opacity: 0;
+}
+
+.checkbox__input:checked+.checkbox__icon .icon__checked {
+    opacity: 1;
+}
+
+.modal__submit__btn {
+    padding: 10px 52px;
+    margin: 0 auto;
+    display: block;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: $main-background-color;
+    background-color: $hover-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+}
+

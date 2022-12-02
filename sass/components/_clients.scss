@@ -1,0 +1,57 @@
+.clients {
+    @extend %section;
+
+    &__container {
+        @extend %container;
+    }
+}
+
+.clients__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $paragraphs-color;
+}
+
+.clients__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.clients__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+}
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    border-radius: 4px;
+
+    color: #afb1b8;
+
+    @include transition(color);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

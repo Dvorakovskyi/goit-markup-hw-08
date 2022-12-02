@@ -1,0 +1,9 @@
+@keyframes scale-up-ver-center {
+    0% {
+        transform: scaleY(0.4) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: scaleY(1) translate(-50%, -50%);
+    }
+}

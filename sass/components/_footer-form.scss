@@ -1,0 +1,71 @@
+.footer__form__text {
+    margin-bottom: 20px;
+    width: 207px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $main-background-color;
+}
+
+.footer__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.footer__input {
+    width: 358px;
+    height: 50px;
+    padding-left: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: #2f303a;
+    outline: none;
+    color: rgba(255, 255, 255, 0.6);
+
+    &::placeholder {
+        font-size: 16px;
+        line-height: 1.3;
+        letter-spacing: 0.03em;
+    
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.footer__form__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 28px;
+    width: 200px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+
+    color: $main-background-color;
+    background-color: $hover-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: #188ce8;
+    }
+}
+
