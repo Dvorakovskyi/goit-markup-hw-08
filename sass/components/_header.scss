@@ -3,18 +3,22 @@
 }
 
 .header__container {
-    @extend %container;
-
     display: flex;
     align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .header__discription {
-    margin-right: 93px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    // margin-right: 93px;
 }
 
 .header__contact {
-    display: flex;
+    display: none;
     text-align: center;
     margin-left: auto;
     gap: 50px;
