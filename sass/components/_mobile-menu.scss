@@ -126,23 +126,12 @@
     display: flex;
     align-items: center;
     gap: 20px;
-    position: relative;
-
+    
     margin-top: 64px;
 }
 
 .menu__social__item {
-    &::after {
-        content: '';
-        position: absolute;
-        left: 85px;
-        bottom: 10px;
-        width: 22px;
-        height: 1px;
-        border-radius: 1px;
-        background-color: rgba(33, 33, 33, 0.2);
-        transform: rotate(90deg);
-        }
+    position: relative;
 }
 
 .menu__social__link {
@@ -153,5 +142,15 @@
 
     color: $hover-color;
 
-    
+    &::after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: 10px;
+        width: 22px;
+        height: 1px;
+        border-radius: 1px;
+        background-color: black;
+        transform: rotate(90deg);
+    }
 }

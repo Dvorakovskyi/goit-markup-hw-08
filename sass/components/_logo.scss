@@ -6,6 +6,11 @@
     letter-spacing: 0.03em;
 
     color: $hover-color;
+
+    // Desktop screen
+    @media screen and (min-width: 1200px) {
+        font-size: 26px;
+    }
 }
 
 .logo__header {

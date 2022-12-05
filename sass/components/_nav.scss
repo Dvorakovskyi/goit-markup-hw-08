@@ -1,7 +1,12 @@
 .nav__list {
-    display: none;
+    display: flex;
     text-align: center;
     gap: 50px;
+
+    // Phone screen
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 
 .nav__link {
