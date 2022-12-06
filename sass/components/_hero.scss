@@ -1,58 +1,100 @@
 .hero {
-    max-width: 1600px;
-    margin: 0 auto;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  text-align: center;
+  background-color: $secondery-background-color;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &__container {
+    @extend %container;
+  }
+
+  // Phone screen
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../../images/hero/ph@1x.jpg);
+  //Retina phone screen
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/ph@2x.jpg);
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 481px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/tb@1x.jpg);
+  }
+  //Retina tablet screen
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/tb@2x.jpg);
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 769px) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/dt@1x.jpg);
+  }
+  //Retina desktop screen
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/dt@2x.jpg);
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
     padding-top: 200px;
     padding-bottom: 200px;
-    text-align: center;
-    background-color: $secondery-background-color;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/bg-hero.jpg);
-
-    &__container {
-        @extend %container;
-    }
+  }
 }
 
 .hero__title {
-    margin-bottom: 30px;
-    width: 696px;
-    margin-right: auto;
-    margin-left: auto;
+  margin-bottom: 30px;
+  width: 360px;
+  margin-right: auto;
+  margin-left: auto;
 
-    font-weight: 900;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: $main-background-color;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    width: 696px;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-
-    color: $main-background-color;
+  }
 }
 
 .hero__btn {
-    border-radius: 4px;
-    padding: 10px 32px;
+  border-radius: 4px;
+  padding: 10px 32px;
 
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.9;
-    align-items: center;
-    letter-spacing: 0.06em;
-    border-style: none;
-    cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  align-items: center;
+  letter-spacing: 0.06em;
+  border-style: none;
+  cursor: pointer;
 
-    color: $main-background-color;
-    background-color: $hover-color;
+  color: $main-background-color;
+  background-color: $hover-color;
 
-    @include transition (background-color);
+  @include transition(background-color);
 
-    &:hover,
-    &:focus {
-        background-color: #188ce8;
-    }
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }
-
