@@ -1,67 +1,113 @@
 .team {
-    @extend %section;
+  @extend %section;
 
-    background-color: $team-background-color;
+  background-color: $team-background-color;
 
-    &__container {
-        @extend %container;
-    }
+  &__container {
+    @extend %container;
+  }
 }
 
 .team__title {
-    margin-bottom: 50px;
+  margin-bottom: 30px;
 
-    font-weight: 700;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $paragraphs-color;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
     font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: $paragraphs-color;
+    margin-bottom: 50px;
+  }
 }
 
 .team__list {
+  // Tablet screen
+  @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .team__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $main-background-color;
+
+  // Phone screen
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
     flex-basis: calc((100% - 3 * 30px) / 4);
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-    background-color: $main-background-color;
+    &:nth-child(-n + 2) {
+      margin-bottom: 0;
+    }
 
     &:not(:last-child) {
-        margin-right: 30px;
+      margin-right: 30px;
     }
+  }
+}
+
+.team__img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .team__wrapper {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 
-    text-align: center;
+  text-align: center;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
 }
 
 .team__name {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
 
-    color: $paragraphs-color;
+  color: $paragraphs-color;
 }
 
 .team__position {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
 
-    color: $text-color;
+  color: $text-color;
 }
-

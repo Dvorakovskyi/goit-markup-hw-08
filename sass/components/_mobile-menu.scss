@@ -1,155 +1,144 @@
 .menu {
-    display: flex;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 
-    @media (max-width: 767px) {
-        display: none;
-    }
+  @media (max-width: 767px) {
+    display: none;
+  }
 }
 
 .menu .link {
-    padding: 10px;
-    color: inherit;
-    text-decoration: none;
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .menu .link:hover,
 .menu .link:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .menu__toggle {
-    min-height: 40px;
-    min-width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin-left: auto;
-    padding: 0;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    border-radius: 50%;
-    outline: none;
+  margin-left: auto;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
 
-    @include transition(background-color);
+  @include transition(background-color);
 
-    &:hover,
-    &:focus {
-        background-color: $hover-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+  }
 
-    @media (min-width: 768px) {
-        display: none;   
-    }
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu__container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    padding-left: 40px;
-    padding-right: 83px;
-    background-color: $main-background-color;
-    z-index: 999;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  padding-right: 83px;
+  background-color: $main-background-color;
+  z-index: 999;
 
-    transform: translateX(100%);
-    transition: transform 250ms ease-in-out;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
 }
 
 .menu__container.is-open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .menu__container .menu__toggle {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    color: $paragraphs-color;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: $paragraphs-color;
 }
 
 .menu__list {
-    margin-bottom: auto;
-    padding: 0;
-    list-style: none;
+  margin-bottom: auto;
+  padding: 0;
+  list-style: none;
 }
 
 .menu__link {
-    display: block;
-    padding: 10px;
-    margin-bottom: 32px;
+  display: block;
+  padding: 10px;
+  margin-bottom: 32px;
 
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 
-    color: $paragraphs-color;
+  color: $paragraphs-color;
 
-    &--current {
+  &--current {
     color: $hover-color;
-    }
+  }
 }
 
 .number__item {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .number__link {
-    font-weight: 500;
-    font-size: 34px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 
-    color: $hover-color;
+  color: $hover-color;
 }
 
 .email__link {
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 
-    color: $text-color;
+  color: $text-color;
 }
 
 .menu__social__list {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-top: 64px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 64px;
 }
 
-.menu__social__item {
-    position: relative;
+.menu__social__item:not(:last-child) {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  padding-right: 10px;
 }
 
 .menu__social__link {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
 
-    color: $hover-color;
-
-    &::after {
-        content: '';
-        position: absolute;
-        right: -20px;
-        bottom: 10px;
-        width: 22px;
-        height: 1px;
-        border-radius: 1px;
-        background-color: rgba(33, 33, 33, 0.2);
-        transform: rotate(90deg);
-    }
+  color: $hover-color;
 }
