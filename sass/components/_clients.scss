@@ -30,6 +30,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .clients__item {
@@ -39,42 +40,44 @@
   height: 92px;
   width: 210px;
   @media screen and (min-width: 480px) {
-  &:nth-child(2n + 1) {
-      margin-right: 30px;
-    }
-  &:not(:nth-child(n + 5)) {
-    margin-bottom: 30px;
-  }
+    flex-basis: calc((100% - 30px) / 2);
+  // &:nth-child(2n + 1) {
+  //     margin-right: 30px;
+  //   }
+  // &:not(:nth-child(n + 5)) {
+  //   margin-bottom: 30px;
+  // }
 }
 
   // Tablet screen
   @media screen and (min-width: 768px) {
     width: 226px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
 
-    &:not(:nth-child(3n + 3)) {
-      margin-right: 30px;
-    }
+    // &:not(:nth-child(3n + 3)) {
+    //   margin-right: 30px;
+    // }
 
-    &:nth-child(3) {
-      margin-right: 0;
-    }
+    // &:nth-child(3) {
+    //   margin-right: 0;
+    // }
 
-    &:nth-child(4) {
-      margin-bottom: 0;
-    }
+    // &:nth-child(4) {
+    //   margin-bottom: 0;
+    // }
   }
 
   //   Desktop screen
   @media screen and (min-width: 1200px) {
     width: 170px;
-    
-    &:nth-child(-n + 3) {
-      margin-bottom: 0;
-    }
+    flex-basis: calc((100% - 5 * 30px) / 6);
+    // &:nth-child(-n + 3) {
+    //   margin-bottom: 0;
+    // }
 
-    &:nth-child(3) {
-      margin-right: 30px;
-    }
+    // &:nth-child(3) {
+    //   margin-right: 30px;
+    // }
   }
 }
 
