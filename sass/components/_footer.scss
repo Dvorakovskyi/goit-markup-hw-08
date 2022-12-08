@@ -1,62 +1,99 @@
 .footer {
-    @extend %section;
+  @extend %section;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-    background-color: $secondery-background-color;
+  background-color: $secondery-background-color;
 }
 
 .footer__container {
-    @extend %container;
+  @extend %container;
 
-    display: flex;
+  display: flex;
+  flex-direction: column;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
     align-items: baseline;
+    flex-direction: row;
+  }
+}
+
+.footer__wrapper {
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
 }
 
 .footer__contacts {
+  margin-bottom: 60px;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
     margin-right: 70px;
+  }
 }
 
 .footer__list {
-    font-style: normal;
+  font-style: normal;
+  text-align: center;
+
+  // Desktop screen
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .footer__item {
-    width: 231px;
+  width: 232px;
+  display: inline-block;
 
-    &--bottom-indent {
-        margin-bottom: 9px;
-    }
+  &--bottom-indent {
+    margin-bottom: 8px;
+
+  // Desktop screen
+ @media screen and (min-width: 1200px) {
+     margin-bottom: 9px;
+ }
+  }
+
+  // Tablet screen
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 }
 
 .footer__google__map {
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 
-    color: $main-background-color;
+  color: $main-background-color;
 
-    @include transition(color);
+  @include transition(color);
 
-    &:hover,
-    &:focus {
-        color: $hover-color;
-    }
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
 }
 
 .footer__link {
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
 
-    color: $footer-contact-color;
+  color: $footer-contact-color;
 
-    @include transition(color);
+  @include transition(color);
 
-    &:hover,
-    &:focus {
-        color: $hover-color;
-    }
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
 }
-
