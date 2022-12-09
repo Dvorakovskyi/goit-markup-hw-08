@@ -1,4 +1,8 @@
 body {
     font-family: 'roboto', sans-serif;
     background-color: $main-background-color;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
 }
