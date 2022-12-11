@@ -32,7 +32,8 @@
 .modal__input {
   display: block;
   width: 370px;
-  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 42px;
   margin-bottom: 10px;
 
@@ -145,6 +146,7 @@
   line-height: 1.9;
   text-align: center;
   letter-spacing: 0.06em;
+  cursor: pointer;
 
   color: $main-background-color;
   background-color: $hover-color;

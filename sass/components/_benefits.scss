@@ -66,11 +66,14 @@
 
   background-color: $portfolio-button-background-color;
   border-radius: 4px;
-  // width: 270px;
   width: 450px;
   height: 120px;
   margin-bottom: 30px;
   margin-right: 0;
+
+  @media screen and (max-width: 479px) {
+    width: 290px;
+  }
 
   // Tablet screen
   @media screen and (min-width: 768px) {

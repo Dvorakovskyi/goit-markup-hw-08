@@ -62,7 +62,7 @@
   background-color: $main-background-color;
   z-index: 999;
 
-  transform: translateX(100%);
+  transform: translateX(200%);
   transition: transform 250ms ease-in-out;
 }
 
@@ -98,6 +98,10 @@
   &--current {
     color: $hover-color;
   }
+
+    @media screen and (max-width: 479px) {
+      font-size: 35px;
+    }
 }
 
 .number__item {
@@ -111,6 +115,10 @@
   letter-spacing: 0.02em;
 
   color: $hover-color;
+
+  @media screen and (max-width: 479px) {
+    font-size: 22px;
+  }
 }
 
 .email__link {
@@ -120,6 +128,10 @@
   letter-spacing: 0.02em;
 
   color: $text-color;
+
+  @media screen and (max-width: 479px) {
+      font-size: 22px;
+    }
 }
 
 .menu__social__list {
@@ -141,4 +153,8 @@
   letter-spacing: 0.02em;
 
   color: $hover-color;
+
+  @media screen and (max-width: 479px) {
+      font-size: 13px;
+    }
 }

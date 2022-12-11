@@ -65,6 +65,10 @@
     color: rgba(255, 255, 255, 0.6);
   }
 
+  @media screen and (max-width: 479px) {
+    width: 290px;
+  }
+
   // Desktop screen
   @media screen and (min-width: 1200px) {
     width: 358px;

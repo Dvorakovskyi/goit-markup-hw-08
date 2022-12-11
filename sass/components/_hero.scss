@@ -65,6 +65,10 @@
 
   color: $main-background-color;
 
+  @media screen and (max-width: 479px) {
+    width: 250px;
+  }
+
   // Desktop screen
   @media screen and (min-width: 1200px) {
     width: 696px;
