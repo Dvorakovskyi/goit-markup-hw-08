@@ -296,7 +296,7 @@ img {
   background-position: center;
   background-size: cover;
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/ph@1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/ph@1x.jpg);
@@ -1280,6 +1280,7 @@ img {
   .modal {
     width: 310px;
     min-height: 400px;
+    padding: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1383,7 +1384,7 @@ img {
 }
 @media screen and (max-width: 479px) {
   .modal__input {
-    width: 230px;
+    width: 270px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1436,7 +1437,7 @@ img {
 }
 @media screen and (max-width: 479px) {
   .modal__input--textarea {
-    width: 230px;
+    width: 270px;
     height: 90px;
   }
 }
