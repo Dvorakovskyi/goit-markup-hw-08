@@ -1276,6 +1276,12 @@ img {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+@media screen and (max-width: 479px) {
+  .modal {
+    width: 310px;
+    min-height: 400px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1329,6 +1335,11 @@ img {
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (max-width: 479px) {
+  .modal__text {
+    font-size: 16px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal__text {
     line-height: 1.15;
@@ -1369,6 +1380,11 @@ img {
 }
 .modal__input:focus + .input__icon {
   fill: #2196f3;
+}
+@media screen and (max-width: 479px) {
+  .modal__input {
+    width: 230px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__input {
@@ -1418,6 +1434,12 @@ img {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
+@media screen and (max-width: 479px) {
+  .modal__input--textarea {
+    width: 230px;
+    height: 90px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal__input--textarea {
     width: 448px;
@@ -1457,6 +1479,11 @@ img {
       -ms-user-select: none;
           user-select: none;
   color: #757575;
+}
+@media screen and (max-width: 479px) {
+  .checkbox__label {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .checkbox__label {
